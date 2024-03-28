@@ -1,0 +1,48 @@
+
+<div class="card ">
+    <div class="container-fluid d-flex justify-content-center  h-50 shadow-lg p-3 mt-5 mb-5 fs-5 rounded ">
+      <form class="desc" class="row ">
+          <div class="col">
+             <!-- Column for form title -->
+            <p class="text-center text-light fw-bold fs-1">Update Task Form</p>
+          </div>
+          <div class="form-group mb-3 primary-text">
+             <!-- Form group for user title input -->
+            <label for="exampleInputtitle">User Title :</label>
+            <input [value]="Tasks.title" #title type="text" class="form-control p-2" id="exampleInputtitle" aria-describedby="titleHelp" placeholder="Enter title">         
+          </div> 
+          <div class="form-group mb-3 primary-text">
+            <!-- Form group for description input -->    
+            <label for="exampleInputDescription">Description :</label>
+            <input [value]="Tasks.description" #description type="text" class="form-control p-2" id="exampleInputDescription" aria-describedby="DescriptionHelp" placeholder="Enter Description">      
+          </div>
+          <div class="form-group mb-3 primary-text">
+              <!-- Form group for due date input -->    
+            <label for="exampleInputdueDate">DueDate :</label>
+            <input [value]="formatDate(Tasks.dueDate)"  #dueDate type="date" class="p-2 form-control" id="exampleInputdueDate" aria-describedby="dueDateHelp" placeholder="Enter dueDate"> 
+          </div>
+          <div class="form-group mb-4 primary-text">
+              <!-- Form group for priority selection -->
+            <label for="exampleInputpriority">User priority :</label>
+            <select [value]="Tasks.priority"  #priority class="form-control p-2" id="exampleInputpriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>  
+          </div>
+          <div class="form-group mb-4 primary-text">
+             <!-- Form group for completed status selection -->
+            <label for="exampleInputcompleted">User completed status :</label>
+            <select  [value]="Tasks.completed" #completed class="form-control p-2" id="exampleInputcompleted">
+                <option value="Completed">Completed</option>
+                <option value="Not Completed">Not Completed</option>
+            </select>  
+        </div>
+        <div class=" m-2 primary-text d-flex justify-content-center">
+            <!-- Button to update task -->
+          <input (click)="updateTask(title.value, description.value, dueDate.value, priority.value,completed.value)"  class="m-2 w-50 btn btn-primary p-2 fs-5" type="button" value="Update Task" >
+        </div>
+      </form>
+    </div> 
+</div> 
+      

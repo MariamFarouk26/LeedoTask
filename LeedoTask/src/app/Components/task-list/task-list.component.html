@@ -1,0 +1,45 @@
+
+<div class="table-container ">
+<table>
+    <thead>
+      <tr>
+        <!-- Table header columns -->
+        <th>Title</th>
+        <th>Completed Status</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+       <!-- Loop through each task in Tasks array -->
+      @for (task of Tasks; track $index) {
+          <tr>
+             <!-- Table body rows -->
+              <td>{{task.title}}</td>
+              <td>
+                  <!-- Button to toggle task completion status -->
+                <button [class.completed-button]="task.completed === 'Completed'"
+                        [class.not-completed-button]="task.completed === 'Not Completed'"
+                        (click)="toggleCompletion(task.id,task.completed)">
+                  {{ task.completed }}
+                </button>
+              </td>
+              <td>
+                 <!-- Button to navigate to update page for the task -->
+                <button class="action-button" routerLink="/update/{{task.id}}">
+                  <i class="fas fa-pencil-alt update-icon"></i> <!-- Font Awesome pencil icon for update -->
+                </button>
+              </td>
+              <td>
+                <!-- Button to delete the task -->
+                <button class="action-button" (click)="deleteTask(task.id)">
+                  <i class="fa fa-trash trash-icon"></i> <!-- Font Awesome trash icon for delete -->
+                </button>
+              </td>
+          </tr>
+          }
+    </tbody>
+</table>
+</div>
+<!-- Button to navigate to add new task page -->
+<div class="add-button" routerLink="/add"><i class="fas fa-plus"></i></div>
