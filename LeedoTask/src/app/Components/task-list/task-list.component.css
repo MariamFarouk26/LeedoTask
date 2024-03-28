@@ -1,0 +1,181 @@
+/* Font Awesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+  .table-container {
+    margin: 50px;
+  }
+  
+/* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 25px;
+    backdrop-filter: blur(30px);
+    color: white;
+  }
+  
+  thead {
+    background-color: #f2f2f229;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+    letter-spacing: 1px; /* Add spacing between letters */
+  }
+  
+/*style for tr of even index */
+  tr:nth-child(even) {
+    background-color: #f2f2f229;
+  }
+  
+  /* Hover effect */
+  tr:hover {
+    background-color: #64636355;
+  }
+  
+
+  /* Completed button style */
+  .completed-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .completed-button:hover {
+    background-color: #347a37;
+  } 
+  
+  .not-completed-button {
+    background-color: #ccc; /* Grey */
+    border: none;
+    color: #777; /* Dark grey text */
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .not-completed-button:hover {
+    background-color:  #acaaaa;
+  } 
+
+
+  /* Remove border from button */
+  .action-button {
+    background-color: transparent;
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+    font-size: 19px;
+  }
+
+  .trash-icon {
+    color: red; /* Set color to red */
+  }
+  .update-icon {
+    color: rgb(251, 254, 251); /* Set color to red */
+  }
+  .add-button {
+    position: fixed;
+    bottom: 70px;
+    right: 60px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+  }
+
+
+
+
+
+/* Media query for smaller screens */
+
+/* Media query for screen smaller than 460px */
+@media screen  and (max-width: 460px) {
+  table {
+    font-size: 17px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 14px;
+  }
+  .completed-button {
+    font-size: 11px;
+  }
+  .not-completed-button {
+    font-size: 11px;
+  }
+  .action-button {
+    font-size: 11px;
+  }
+  
+  .add-button {
+    font-size: 25px; 
+  }  
+}
+
+/* Media query for screen smaller than 870px and greater than 461px*/
+@media screen and (min-width: 461px) and (max-width: 870px) {
+  table {
+    font-size: 20px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 19px;
+  }
+  .completed-button {
+    font-size: 14px;
+  }
+  .not-completed-button {
+    font-size: 14px;
+  }
+  .action-button {
+    font-size: 17px;
+  }
+  
+  .add-button {
+    font-size: 35px; 
+  }  
+}
+
+/* Media query for screen smaller than 1240px and greater than 871px*/
+@media screen and (min-width: 871px) and (max-width: 1240px){
+  table {
+    font-size: 22px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 20px;
+  }
+  .completed-button {
+    font-size: 16px;
+  }
+  .not-completed-button {
+    font-size: 16px;
+  }
+  .action-button {
+    font-size: 16px;
+  }
+  
+  .add-button {
+    font-size: 40px; 
+  }  
+}
+
